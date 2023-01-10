@@ -3,15 +3,14 @@
   "npmScope": "poalim",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": [
           "build",
           "lint",
           "test",
           "e2e"
-        ],
-        "accessToken": "NzNhNmRmYTgtODM4Mi00NGE0LTk4NGEtMTY5OGE5NGUyNjQwfHJlYWQtd3JpdGU="
+        ]
       }
     }
   },
