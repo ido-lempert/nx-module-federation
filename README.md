@@ -13,3 +13,12 @@ create remote app named *credit*:
 ## genrate lib
 ```nx g lib auth```
 ```nx s accounts --project auth```
+
+https://webpack.js.org/plugins/module-federation-plugin/#sharing-hints
+```
+  shared: (name, config) => {
+    if (name == '@poalim/auth') return false;
+    // We want lodash to be tree shaken, and bundled into each host/remote separately.
+    return config;
+  },
+```
