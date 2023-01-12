@@ -2,7 +2,13 @@ const { withModuleFederation } = require('@nrwl/angular/module-federation');
 
 
 const moduleFederationConfig = require('./module-federation.config');
-module.exports = withModuleFederation(moduleFederationConfig);
+module.exports = withModuleFederation({
+  ...moduleFederationConfig,
+  // remotes: [
+  //   ['credit', 'http://localhost:4201'],
+  //   ['capital-market', 'http://localhost:4202']
+  // ]
+});
 
 // const { ModuleFederationPlugin } = require('webpack').container;
 // const {merge} = require('webpack-merge');
